@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zoho</title>
+    <base href="/chat-zoho/" />
+    <h1>Hello world</h1>
+    <script type="text/javascript">
+      var $zoho = $zoho || {};
+
+      $zoho.salesiq = $zoho.salesiq || {
+        widgetcode:
+          "siq0aa3bfa276877020a60d70818480495b543f52a3d2ad9d46996890483451d654",
+        values: {},
+        ready: function () {},
+      };
+
+      var d = document;
+      s = d.createElement("script");
+      s.type = "text/javascript";
+      s.id = "zsiqscript";
+      s.defer = true;
+      s.src = "https://salesiq.zoho.com/widget";
+      t = d.getElementsByTagName("script")[0];
+      t.parentNode.insertBefore(s, t);
+      d.write("<div id='zsiqwidget'></div>");
+    </script>
+  </head>
+
+  <body></body>
+</html>
