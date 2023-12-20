@@ -28,6 +28,19 @@
 
       $zoho.salesiq.ready = function () {
         $zoho.salesiq.floatbutton.visible("hide");
+
+        // Adicionando um botão para alternar entre show e hide
+        var button = document.createElement("button");
+        button.textContent = "Alternar Botão Flutuante";
+        button.addEventListener("click", function () {
+          var currentVisibility = $zoho.salesiq.floatbutton.visible();
+          $zoho.salesiq.floatbutton.visible(
+            currentVisibility === "hide" ? "show" : "hide"
+          );
+        });
+
+        // Adicionando o botão ao corpo do documento
+        document.body.appendChild(button);
       };
     </script>
   </head>
