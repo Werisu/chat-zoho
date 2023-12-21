@@ -4,27 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Zoho</title>
-    <base href="/chat-zoho/" />
-    <script
-      src="https://js.zohocdn.com/salesiq/js/siqnewchatwindow_2Zw6m3uN-71juOWCEmIwX8VDZbZK0fdMNl9PZrUKTn9sHNbl4kX-gvbyLuAt_DOe_.js"
-      integrity="sha384-2Zw6m3uN+71juOWCEmIwX8VDZbZK0fdMNl9PZrUKTn9sHNbl4kX+gvbyLuAt/DOe"
-      crossorigin="anonymous"
-    ></script>
-    <script type="text/javascript">
-      $zoho.salesiq.ready = function () {
-        // Adicionando um botão para alternar entre show e hide
-        var button = document.createElement("button");
-        button.textContent = "Alternar Botão Flutuante";
-        button.addEventListener("click", function () {
-          var currentVisibility = $zoho.salesiq.floatbutton.visible();
-          $zoho.salesiq.floatbutton.visible(
-            currentVisibility === "hide" ? "show" : "hide"
-          );
-        });
-
-        // Adicionando o botão ao corpo do documento
-        document.body.appendChild(button);
-      };
+    <base href="/" />
+    <script src="./javascript.js"></script>
+    <script>
+      setTimeout(() => {
+        $zoho.salesiq.floatbutton.visible("show");
+      }, 2000);
     </script>
   </head>
 
